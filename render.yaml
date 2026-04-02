@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: xspacego-api
+    runtime: docker
+    rootDir: apps/api
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: PROJECT_NAME
+        value: XSpaceGo Platform API
+      - key: API_V1_PREFIX
+        value: /api/v1
+      - key: ENVIRONMENT
+        value: production
