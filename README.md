@@ -91,6 +91,73 @@ uvicorn app.main:app --reload
 
 Runs on `http://localhost:8000`.
 
+## Quick Run Reference
+
+Use two terminals.
+
+### Terminal A - Frontend
+
+Run from:
+
+```powershell
+d:\VK\Project\xspacego-platform\apps\web
+```
+
+Commands:
+
+```powershell
+cd d:\VK\Project\xspacego-platform\apps\web
+npm exec pnpm install
+npm exec pnpm dev
+```
+
+Open in browser:
+
+```text
+http://localhost:3000
+```
+
+### Terminal B - Backend
+
+Run from:
+
+```powershell
+d:\VK\Project\xspacego-platform\apps\api
+```
+
+Commands:
+
+```powershell
+cd d:\VK\Project\xspacego-platform\apps\api
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -e .
+uvicorn app.main:app --reload
+```
+
+Open in browser:
+
+```text
+http://localhost:8000
+http://localhost:8000/api/v1/health
+http://localhost:8000/api/v1/pipeline/overview
+```
+
+### If `pnpm` is not recognized
+
+Install it once:
+
+```powershell
+npm install -g pnpm
+```
+
+If the same terminal still does not recognize it, use:
+
+```powershell
+npm exec pnpm install
+npm exec pnpm dev
+```
+
 ## Frontend Deployment
 
 Deploy `apps/web` to Vercel.
