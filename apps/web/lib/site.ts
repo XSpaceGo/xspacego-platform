@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "XSpaceGo Platform",
-  tagline: "Intelligent Lunar Subsurface Detection Powered by the XSpaceGo Algorithm",
+  tagline: "XSpaceGo",
   description:
     "A mission-control style platform for SAR-based lunar lava tube detection, terrain validation, and candidate ranking.",
   pipeline: [
